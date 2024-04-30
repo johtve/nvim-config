@@ -12,7 +12,7 @@ return {
 			},
 		}
 	},
-	config = { function()
+	config = function()
 		local lsp_zero = require('lsp-zero')
 		lsp_zero.on_attach(function(client, bufnr)
 			lsp_zero.default_keymaps({ buffer = bufnr })
@@ -25,7 +25,26 @@ return {
 				client.server_capabilities.semanticTokensProvider = nil
 			end,
 		})
-	end
 
-	}
+
+		-- Setup for nvim-cmp
+		local cmp = require("cmp")
+		local lspkind = require("lspkind")
+		cmp.setup({
+			view = {entries = "custom"},
+			sources = {
+				{name = "nvim_lsp"},
+				{name = "buffer"},
+				{name = "luasnip"},
+				{name = "copilot"},
+			},
+			formatting = {
+				format = lspkind.cmp_format({
+					mode = "symbol",
+					-- My current nerd font doesn't support the actual Copilot symbol
+					symbol_map = { Copilot = "" }
+				}),
+			},
+		})
+	end
 }
