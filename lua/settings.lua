@@ -4,6 +4,8 @@ vim.cmd.colorscheme('ofirkai')
 vim.cmd("set number")
 -- Hightlight matching parentheses
 vim.cmd("DoMatchParen")
+-- Smart case sensitivity when searching (insensitive when all lowercase)
+vim.cmd("set smartcase")
 
 -- Enable indent folding
 vim.o.foldmethod = 'indent'
