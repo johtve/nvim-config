@@ -31,12 +31,12 @@ return {
 		local cmp = require("cmp")
 		local lspkind = require("lspkind")
 		cmp.setup({
-			view = {entries = "custom"},
+			view = { entries = "custom" },
 			sources = {
-				{name = "nvim_lsp"},
-				{name = "buffer"},
-				{name = "luasnip"},
-				{name = "copilot"},
+				{ name = "nvim_lsp" },
+				{ name = "buffer" },
+				{ name = "luasnip" },
+				{ name = "copilot" },
 			},
 			formatting = {
 				format = lspkind.cmp_format({

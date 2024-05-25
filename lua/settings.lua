@@ -14,7 +14,6 @@ vim.o.foldlevelstart = 99
 
 -- Terminal color setup stuff
 vim.o.termguicolors = true
-vim.o.t_Co = 256
 
 -- Automatically enter insert mode on terminal open
 vim.api.nvim_create_autocmd({ "TermOpen", "BufEnter" }, {
