@@ -8,10 +8,8 @@ vim.keymap.set('n', '<leader>fh', telescope_builtin.help_tags, {})
 -- Telescope file browser
 vim.keymap.set("n", "<leader>fb", ":Telescope file_browser<CR>")
 
--- LSP zero autocompletion
+-- Autocompletion
 local cmp = require('cmp')
-local cmp_action = require('lsp-zero').cmp_action()
-
 cmp.setup({
 	mapping = cmp.mapping.preset.insert({
 		-- `Enter` key to confirm completion
@@ -19,10 +17,6 @@ cmp.setup({
 
 		-- Ctrl+Space to trigger completion menu
 		['<C-Space>'] = cmp.mapping.complete(),
-
-		-- Navigate between snippet placeholder
-		['<C-f>'] = cmp_action.luasnip_jump_forward(),
-		['<C-b>'] = cmp_action.luasnip_jump_backward(),
 
 		-- Scroll up and down in the completion documentation
 		['<C-u>'] = cmp.mapping.scroll_docs(-4),
