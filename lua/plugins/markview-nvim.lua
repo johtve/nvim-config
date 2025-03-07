@@ -8,6 +8,8 @@ return {
 		"nvim-tree/nvim-web-devicons"
 	},
 	opts = {
-		filetypes = { "markdown", "latex", "tex" },
+		preview = {
+			filetypes = { "markdown", "latex", "tex" },
+		}
 	}
 }
