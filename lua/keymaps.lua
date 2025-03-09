@@ -28,6 +28,10 @@ cmp.setup({
 })
 
 
+-- Code actions (LSP code fixes)
+vim.keymap.set('n', '<leader>fx', vim.lsp.buf.code_action, {})
+
+
 
 -- ToggleTerm
 vim.api.nvim_set_keymap('n', '<C-t>', ':ToggleTerm<CR>', { noremap = true, silent = true })
