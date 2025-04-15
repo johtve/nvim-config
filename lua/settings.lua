@@ -1,5 +1,5 @@
 -- Set colorscheme
-vim.cmd.colorscheme('onedark')
+vim.cmd.colorscheme('catppuccin-macchiato')
 -- Enable line numbering
 vim.cmd("set number")
 -- Hightlight matching parentheses
